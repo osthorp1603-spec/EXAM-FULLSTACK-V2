@@ -3,7 +3,7 @@ import { Routes,Route } from 'react-router-dom'
 import { RegistroDatos } from './pages/RegistroDatos'
 import { Instrucciones } from './pages/Instrucciones'
 import { Examen } from './pages/Examen'
-import { Admin } from './pages/admin'
+import { Admin } from './pages/Admin'
 
 
 function App() {
