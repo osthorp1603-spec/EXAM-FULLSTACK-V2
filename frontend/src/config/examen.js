@@ -4,8 +4,8 @@ export const VALOR_POR_PREGUNTA = 0.5;
 // Duración del examen en segundos (3600 = 1 hora)
 export const TIEMPO_EXAMEN = 3600;
 
-// URL base del backend
-export const API_URL = "http://localhost:3000";
+// URL base del backend - local / render
+export const API_URL = import.meta.env.VITE_API_URL;
 
 // Sedes válidas
 export const SEDES_VALIDAS = ["norte", "sur"];
