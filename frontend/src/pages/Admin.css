@@ -1,0 +1,183 @@
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+
+.admin-contenedor {
+  position: relative;
+  background-color: #ffffff;
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.04);
+  width: 1200px;
+  max-width: calc(100% - 40px);
+  animation: fadeInUp 0.4s ease-out;
+  overflow: hidden;
+}
+
+.admin-contenedor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0b5ed7 0%, #0846a0 100%);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-contenedor h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin: 0 0 32px 0;
+  letter-spacing: -0.5px;
+}
+
+/* ========================================
+   FILTROS
+   ======================================== */
+
+.admin-filtros {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f9fafb;
+  border: 1px solid #eef0f3;
+  border-radius: 14px;
+  margin-bottom: 28px;
+}
+
+.admin-filtros label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  letter-spacing: 0.2px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.admin-filtros select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: white;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  cursor: pointer;
+}
+
+.admin-filtros select:focus {
+  border-color: #0b5ed7;
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.15);
+}
+
+/* ========================================
+   TABLA
+   ======================================== */
+
+.admin-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.admin-tabla thead {
+  background: linear-gradient(135deg, #0b5ed7 0%, #0846a0 100%);
+}
+
+.admin-tabla th {
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.admin-tabla td {
+  padding: 14px 16px;
+  color: #374151;
+  border-bottom: 1px solid #eef0f3;
+  vertical-align: top;
+}
+
+.admin-tabla tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-tabla tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.admin-respuestas {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 12px;
+  color: #64748b;
+  max-width: 320px;
+  word-break: break-word;
+}
+
+/* ========================================
+   MENSAJES
+   ======================================== */
+
+.admin-mensaje {
+  text-align: center;
+  padding: 40px;
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.admin-mensaje.error {
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .admin-contenedor {
+    padding: 28px 20px;
+  }
+
+  .admin-tabla {
+    font-size: 12px;
+  }
+
+  .admin-tabla th,
+  .admin-tabla td {
+    padding: 10px 8px;
+  }
+
+  .admin-respuestas {
+    font-size: 11px;
+  }
+}
